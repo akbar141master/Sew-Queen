@@ -1,0 +1,250 @@
+{
+    "name": "✬Sew Queen✬",
+    "description": "World Best Whatsapp Bot.💖",
+    "logo": "https://i.ibb.co/JkjKGTy/temp-user-profile1621662133773.jpg",
+    "keywords": ["whatsapp", "userbot", "sew", "sewqueen", "bot", "api", "ai"],
+    "repository": "",
+    "website":   "https://youtu.be/AKU7YVXxMbM",
+    "success_url": "https://youtu.be/AKU7YVXxMbM",
+    "stack": "container",
+    "env": {
+        "_SEW_QUEEN_SESSION": {
+            "description": "Type here yours SEW_QUEEN Session.QR කෝඩය ස්කෑන් කර ලබා ගන්නා කේතය ඇතුලත් කරන්න",
+            "required": true
+        },
+        "LANGUAGE": {
+            "description": "Bot language.English => en, භාශාව තේරීම සදහා",
+            "required": true,
+            "value": "en"
+        },
+        "S_DOWN_SONG": {
+            "description": "Song Downloading Msg",
+            "required": true,
+            "value": "_*I'm Searching your song*_ ✨➾🔎"
+        },
+        "S_UP_SONG": {
+            "description": "Song Uploading Msg",
+            "required": true,
+            "value": "_*Im Uploading your song*_ ✨➾🎲"
+        },
+        "S_DOWN_VID": {
+            "description": "Video Downloading Msg",
+            "required": true,
+            "value": "_*I'm Bringing your video*_ ✨➾🔎"
+        },
+        "S_UP_VID": {
+            "description": "video Uploading Msg",
+            "required": true,
+            "value": "_*Im Uploading your video*_ ✨➾🎲"
+        },
+        "GROUP_MANAGE": {
+            "description": "if true ==> Admin CMD for Admin",
+            "required": true,
+            "value": "true"
+        },
+        "ANTİ_LİNK": {
+            "description": "Link Blocking System.ගෲපයට කෙනෙකු ලින්ක් එකක් ඇතුලත් කලහොත් ඔහුව ගෲපයෙන් නෙරපා දමයි",
+            "required": true,
+            "value": "false"
+        },
+        "INBO_BLOCK": {
+            "description": "Inbox Blocking System",
+            "required": true,
+            "value": "false"
+        },
+        "SPAM_CMD": {
+            "description": "Changeble Spam CMD... dont use . for here",
+            "required": true,
+            "value": "hunt"
+        },
+        "BAD_KICK": {
+            "description": "Bad Word kicking System",
+            "required": true,
+            "value": "true"
+        },
+        "BIO_A": {
+            "description": "Frist Bio For Auto Bio",
+            "required": true,
+            "value": "🎲If You Think You Are Bad 🤣.. Broo I Am Your Dad☠️"
+        },
+        "BIO_B": {
+            "description": "sec Bio For Auto Bio",
+            "required": true,
+            "value": "Dear Devil🤡 Come For Me☠️"
+        },
+        "BIO_C": {
+            "description": "3rd Bio For Auto Bio",
+            "required": true,
+            "value": "Try To Find Life....💝   Loading....♣️  ERROR :( 🙂 ):  BUT LOVE IS NAVER DIE 🙂"
+        },
+        "ALIVE_LOGO": {
+            "description": "Add Your Alive Logo",
+            "required": false
+        },
+        "STICKER_PACK": {
+            "description": "Sticker pack/Maker Name",
+            "required": true,
+            "value": "🎲Ravindu🎲/✬Sew✬"
+        },
+        "WARN_MSG": {
+            "description": "Warn And Kick Last Msg",
+            "required": true,
+            "value": "*Your Times over Now.. So Good Bye*"
+        },
+        "WARN_COUNT": {
+            "description": "Warn count",
+            "required": true,
+            "value": "2"
+        },
+        "HANDLERS": {
+            "description": "For commands.",
+            "required": true,
+            "value": "^[.!;]"
+        },
+        "CAPTION_NAME": {
+            "description": "කැප්ශන් එක වෙනස් කල හැකිය. you can change the caption",
+            "required": false
+         },
+        "IMGBB_API": {
+            "description": "Add the api i.ibb.co site..==> i.ibb.co සයිට් එකට ලොග් වී ලබා ගන්නා api එක ඇතුලත් කරන්න",
+            "required": false
+         },
+          "ZZ_PASSWORD": {
+            "description": "බොට්ව සෑදීම සදහා පාස්වර්ඩ් එකක් අවශ්‍ය අතර වීඩියෝව නරඹා එය ලබා ගන්න.password required.. watch the video",
+            "required": true
+         },
+        "OWNER_SHIP": {
+            "description": "බොට් අයිතිකරුගේ නාමය වෙනස් කරයි ==> owner name",
+            "required": false,
+            "value": "RAVINDU MANOJ"
+        },
+        
+        "YOUR_BOT_NAME": {
+            "description": "බොට්ගේ නාමය වෙනස් කරයි.==> Bot Name",
+            "required": false,
+            "value": "❄💘sew💓❄bot(💗සූටික්කි💗)R💌S"
+        },
+        "NO_LOG": {
+            "description": "Set true if you don't want to see error log.",
+            "required": true,
+            "value": "false"
+        },
+        "SEND_READ": {
+            "description": "Write true if you want to throw seen.",
+            "required": true,
+            "value": "true"
+        },
+        "HEROKU": {
+            "description": "If it is running in Heroku, type true.",
+            "required": true,
+            "value": "true"
+        },
+        "HEROKU_API_KEY": {
+            "description": "Heroku API Key.",
+            "required": true
+        },
+        "MUTE_MESSAGE": {
+            "description": "Customizable Mute Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "UNMUTE_MESSAGE": {
+            "description": "Customizable Unmute Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "BLOCK_MESSAGE": {
+            "description": "Customizable Block Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "UNBLOCK_MESSAGE": {
+            "description": "Customizable Unblock Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "WORK_TYPE": {
+            "description": "Sew Bot Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
+            "required": true,
+            "value": "public"
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Heroku APP Name.",
+            "required": true
+        },
+        "DEBUG": {
+            "description": "Geliştiricilere özeldir.",
+            "required": true,
+            "value": "false"
+        },
+        "REMOVE_BG_API_KEY": {
+            "description": "Get API Key. https://remove.bg",
+            "required": false
+        },
+        "ALIVE_MESSAGE": {
+            "description": "Customizable Alive Message! Use => default, to change back.",
+            "required": false,
+            "value": "🎲 Hello Im Alive 😌"
+        },
+        "BAN_MESSAGE": {
+            "description": "Customizable Ban Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "ADD_MESSAGE": {
+            "description": "Customizable Add Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "KICKME_MESSAGE": {
+            "description": "Customizable Kickme Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "PROMOTE_MESSAGE": {
+            "description": "Customizable Promote Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "DEMOTE_MESSAGE": {
+            "description": "Customizable Demote Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "AFK_MESSAGE": {
+            "description": "Customizable AFK Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "GAN_IMAGE": {
+            "description": "Type image link for Gan Style plugin.",
+            "required": true,
+            "value": "https://i.hizliresim.com/loUtAb.jpg"
+        },
+        "GROUP_MANAGE": {
+            "description": "Type true if you need allow admin to use admin command",
+            "required": false,
+            "value": "false"
+        },
+        "CLONE_MSG": {
+            "description": "This MSG will display after the clone end",
+            "required": false
+        },
+        "NO_ONLINE": {
+            "description": "Type true if you don't want to appear online.",
+            "required": false,
+            "value": "false"
+        },
+        "COFFEEHOUSE_API_KEY": {
+            "description": "Pass This Step!",
+            "required": false,
+            "value": "true"
+        }
+    },
+    "addons": [{
+      "plan": "heroku-postgresql"
+    }],
+    "buildpacks": [{
+      "url": "heroku-community/apt"
+      }]
+  }

@@ -1,0 +1,134 @@
+/* 
+
+Sew Queen Whatsapp Bot                       
+
+Telegram: https://t.me/RavinduManoj
+Facebook: https://www.facebook.com/ravindu.manoj.79
+Licensed under the  GPL-3.0 License;
+
+Coded By Ravindu Manoj
+
+*/ 
+let DataPack = require('sew-queen-pro');
+let SewQueen = require('sew-queen-pro/sources/dc/handler');
+let Details = require('sew-queen-pro/sources/dc/Details');
+let { MessageType, MessageOptions, Mimetype, GroupSettingChange, ChatModification, WAConnectionTest, WA_DEFAULT_EPHEMERAL } = require('@adiwajshing/baileys');
+let fs = require('fs');
+let os = require('os');
+let ffmpeg = require('fluent-ffmpeg');
+let exec = require('child_process').exec;
+let axios = require('axios');
+let got = require('got');
+let {execFile} = require('child_process');
+let cwebp = require('cwebp-bin');
+let DataHelp = DataPack.constdata
+let WorkType = Details.WORKTYPE == 'public' ? false : true
+let { thumbnail } = require('sew-queen-pro/sources/dc/media/thumbnail');  
+let {spawnSync} = require('child_process');
+let chalk = require('chalk');
+let DATA = DataHelp.dataGet('system_stats');
+let SSSD = DataHelp.dataGet('rrsew');
+let SSSA = DataHelp.dataGet('sewrr'); 
+let I_PACK ="✧✧✧✧✧✧✧✧✧✧✧\n       *Infomation Command*\n\n👑 *.sysd*\n   ✨system information\n\n👑 *.whois*\n   ✨basic whois\n\n👑 *.info*\n   ✨advance information\n\n👑 *.id*\n   ✨user id\n\nᴘᴏᴡᴇʀᴅ ʙʏ ꜱᴇᴡ ǫᴜᴇᴇɴ"
+let I_DESC = "Get infomations with smart bot"
+let DD = " *Group Description:* "
+var ADMİN_USER = ''
+var USER_USER = ''
+var TR_USER = ''
+var Hİ_USER = ''
+var AZ_USER = ''
+var SRİ_USER = ''
+var RU_USER = ''
+var USA_USER = ''
+var OTHER = ''
+if (Details.LANG == 'EN') ADMİN_USER = '✪\n✨ ➢ *Admins:* ', USER_USER = '✨ ➢ *All members:* ', SRİ_USER = '✨ ➢ *SL Members:* ', TR_USER = '✨ ➢ *Tr Members:* ', Hİ_USER = '✨ ➢ *In Members:* ', AZ_USER = '✨ ➢ *Az Members:* ', RU_USER = '✨ ➢ *Ru Members:* ', USA_USER = '✨ ➢ *USA Members:* ', OTHER = '✨ ➢ *Other members:* '
+if (Details.LANG == 'SI') ADMİN_USER = '✪\n✨➢ *පරිපාලකවරුන්:* ', USER_USER = '✨➢ *මුළු සාමාජීකයින්:* ', TR_USER = '✨➢ *තුර්කි අංක:* ', Hİ_USER = '✨➢ *ඉන්දියානු අංක:* ', AZ_USER = '✨➢ *Az අංක:* ', SRİ_USER = '✨➢ *ශ්‍රී ලාංකික අංක:* ', RU_USER = '✨➢ *රුසියානු අංක:* ', USA_USER = '✨➢ *USA අංක :* ', OTHER = '✨➢ *වෙනත් අංක:* '
+    SewQueen['IntroduceCMD']({pattern: 'details', fromMe: WorkType, delownsewcmd: false, desc: I_DESC}, (async (message, input) => {
+       
+        await message.sendMessage(I_PACK);
+      }));
+
+
+    SewQueen['IntroduceCMD']({ pattern: 'info$', fromMe: WorkType, desc: SSSA.PL_DESC, dontAddCMDList: true }, async (message, input) => { 
+       let imgthumb = await thumbnail()
+         if (message.jid.includes('-')) {
+            var kingjson = await message.client.groupMetadataMinimal(message.jid) 
+            var code = await message.client.groupInviteCode(message.jid)
+            var nwjson = await message.client.groupMetadata(message.jid) 
+            let region = await message.client.groupMetadata(message.jid);
+            let grup = await message.client.groupMetadata(message.jid);
+            var jids = [];
+            mesaj = '';
+            var users1 = [];
+            grup['participants'].map(async (uye) => {
+                if (uye.isAdmin) {
+                    mesaj += '@' + uye.id.split('@')[0] + ' ';
+                    jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
+                }
+                users1.push(uye.id.replace('c.us', 's.whatsapp.net'));
+            });
+            var admin_count = jids.length + '\n'
+            var user_count = users1.length + '\n'
+            var tr_user = [];
+            var hi_user = [];
+            var az_user = [];
+            var sri_user = [];
+            var ru_user = [];
+            var usa_user = [];
+            var other_user = [];
+            region['participants'].map(async (reg) => {
+                if (reg.jid.startsWith('90')) { tr_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                } if (reg.jid.startsWith('994')) { az_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                } if (reg.jid.startsWith('91')) { hi_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                } if (reg.jid.startsWith('94')) { sri_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                } if (reg.jid.startsWith('7')) { ru_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                } if (reg.jid.startsWith('1')) { usa_user.push(reg.id.replace('c.us', 's.whatsapp.net'));
+                } 
+            });
+            var trus = ' ' + tr_user.length + '\n'
+            var hius = ' ' + hi_user.length + '\n'
+            var azus = ' ' + az_user.length + '\n'
+            var srius = ' ' + sri_user.length + '\n'
+            var ruus = ' ' + ru_user.length + '\n'
+            var usaus = ' ' + usa_user.length + '\n'
+            var oth = ' ' + user_count - trus - hius - azus - srius - ruus - usaus
+            let user_count_msg = ADMİN_USER + admin_count + USER_USER + user_count + TR_USER + trus + Hİ_USER + hius + AZ_USER + azus + SRİ_USER + srius + RU_USER + ruus + USA_USER + usaus + OTHER + oth + '\n✪ '
+            let msg = `*Group ID:* ${kingjson.id} \n` + SSSA.SUB + `${nwjson.subject} \n` + SSSA.OWN + `${kingjson.owner} \n` + SSSA.COD + `${code} \n` + user_count_msg + DD + `\n\n${nwjson.desc}`
+            var ppUrl = await message.client.getProfilePicture(message.jid) 
+            let resim = await axios.get(ppUrl, {responseType: 'arraybuffer'})
+            await message.sendMessage(
+                Buffer.from(resim.data), 
+                MessageType.image, 
+                {caption: msg , thumbnail: imgthumb, quoted: message.data }
+            );
+        }
+        else {
+            var status = await message.client.getStatus(message.jid) 
+            var usppUrl = await message.client.getProfilePicture(message.jid) 
+            var usexists = await message.client.isOnWhatsApp(message.jid)
+            let nwmsg = SSSA.JİD + `${usexists.jid} \n` + SSSA.ST + `${status.status}`
+            let resimnw = await axios.get(usppUrl, {responseType: 'arraybuffer'})
+            await message.sendMessage(
+                Buffer.from(resimnw.data), 
+                MessageType.image, 
+                { caption: nwmsg, thumbnail: imgthumb, quoted: message.data }
+            );
+        }
+    });
+
+    SewQueen['IntroduceCMD']({pattern: 'id ?(.*)', fromMe: WorkType, desc: DATA.JID_DESC, dontAddCMDList: true}, (async (message, input) => {    
+        if (message.reply_message !== false) {
+            await message.client.sendMessage(message.jid, DATA.JID.format(message.reply_message.jid.split('@')[0], message.reply_message.jid), MessageType.text, {
+                quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
+            });
+        } else if (message.mention !== false) {
+            message.mention.map(async user => {
+                await message.client.sendMessage(message.jid, DATA.JID.format(user.split('@')[0], user), MessageType.text, {
+                    contextInfo: {mentionedJid: [user.replace('c.us', 's.whatsapp.net')]}
+                });    
+            });
+        } else {
+            await message.client.sendMessage(message.jid,message.jidsplit('@')[0], MessageType.text);
+        }
+    }));
+    
