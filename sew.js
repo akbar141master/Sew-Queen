@@ -120,7 +120,7 @@ async function sewQueen() {
         DataKey.on('credentials-updated', async () => {
                 console.log(
                         chalk.blueBright.italic('🚀 Login Information Updated!'));
-            process.stdout.write('🚀 Login Information Updated!')
+           
                 let authInfo = DataKey.base64EncodedAuthInfo();
                 if (StrSes_Db.length < 1) {
                         await SewQueenDB.create({
@@ -154,7 +154,7 @@ async function sewQueen() {
                 }
                 console.log(chalk.blueBright.italic('✧✧ Installing External Commands...'));
                 console.log(chalk.blueBright.italic('⚛ Command Installed!'));
-            process.stdout.write('⚛ Command Installed!')
+      
                 var Commands = await Commandsdb.PluginDB.findAll();
                 Commands.map(async (plugin) => {
                         if (!fs.existsSync('./Commands/' + plugin.dataValues.name + '.js')) {
@@ -200,7 +200,9 @@ async function sewQueen() {
                 }
         }
 }
+async function log() {
+    var dabc = 'Sew Queen Started'
+ console.log(dabc)
+}
 sewQueen();
-process.stdout.write('🚀 Login Information Updated!')
-process.stdout.write('🚀 Login Information Updated!')
-process.stdout.write('🚀 Login Information Updated!')
+log()
