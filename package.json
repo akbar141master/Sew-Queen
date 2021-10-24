@@ -25,7 +25,8 @@
   "homepage": "https://github.com/ravindu01manoj/Sew-Queen#readme",
   "dependencies": {
     "chalk": "4.1.2",
-    "sew-queen-pro": "1.1.7"
+    "sew-queen-pro": "1.1.7",
+    "jpeg-js": "^0.4.3"
   }
 }
 
