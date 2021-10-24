@@ -23,6 +23,13 @@ let {WAConnection, MessageOptions, MessageType, Mimetype, Presence, WALocationMe
 let {Message, StringSession, Image, Video} =  require('sew-queen-pro/sources/dc/Wa-Base/');
 let { DataTypes } = require('sequelize');
 let { getMessage } = require("./DataBase/greetings");
+let Heroku = require('heroku-client');
+let simpleGit = require('simple-git');
+let heroku = new Heroku({
+    token: Details.HEROKU.API_KEY
+});
+let git = simpleGit();
+let baseURI = '/apps/' + Details.HEROKU.APP_NAME;
 
 let SewQueenDB = Details.DATABASE.define('SewQueen', {
         info: {
@@ -88,7 +95,7 @@ async function sewQueen() {
         } else {
                 DataKey.loadAuthInfo(Session.deCrypt(StrSes_Db[0].dataValues.value));
         }
-        DataKey.on('open', async () => {
+        DataKey.on('credentials-updated', async () => {
                 console.log(
                         chalk.blueBright.italic('🚀 Login Information Updated!'));
                 let authInfo = DataKey.base64EncodedAuthInfo();
@@ -123,6 +130,7 @@ async function sewQueen() {
                         return;
                 }
                 console.log(chalk.blueBright.italic('✧✧ Installing External Commands...'));
+                console.log(chalk.blueBright.italic('⚛ Command Installed!'));
                 var Commands = await Commandsdb.PluginDB.findAll();
                 Commands.map(async (plugin) => {
                         if (!fs.existsSync('./Commands/' + plugin.dataValues.name + '.js')) {
@@ -134,7 +142,7 @@ async function sewQueen() {
                                 }
                         }
                 });
-                console.log(chalk.blueBright.italic('⚛ Command Installed!'));
+   
                 fs.readdirSync('./Commands').forEach(plugin => {
                         if (path.extname(plugin).toLowerCase() == '.js') {
                                 require('./Commands/' + plugin);
