@@ -88,8 +88,8 @@ async function sewQueen() {
         await sendMessageownerMSG(DataKey)
         await sendMessageBIOMSG(DataKey)
         await sendMessageADSMSG(DataKey)
-     //   DataKey.logger.level = Details.DEBUG ? 'debug' : 'warn';
- 
+      DataKey.logger.level = Details.DEBUG ? 'debug' : 'warn';
+ /*
     var logger_levels = ''
     if (Details.DEBUG == 'true') {
         logger_levels = 'all'
@@ -109,6 +109,7 @@ async function sewQueen() {
         logger_levels = 'warn'
     }
     DataKey.logger.level = logger_levels
+    */
         var Lostdb;
         if (StrSes_Db.length < 1) {
                 Lostdb = true;
@@ -119,6 +120,7 @@ async function sewQueen() {
         DataKey.on('credentials-updated', async () => {
                 console.log(
                         chalk.blueBright.italic('🚀 Login Information Updated!'));
+            process.stdout.write('🚀 Login Information Updated!')
                 let authInfo = DataKey.base64EncodedAuthInfo();
                 if (StrSes_Db.length < 1) {
                         await SewQueenDB.create({
@@ -152,6 +154,7 @@ async function sewQueen() {
                 }
                 console.log(chalk.blueBright.italic('✧✧ Installing External Commands...'));
                 console.log(chalk.blueBright.italic('⚛ Command Installed!'));
+            process.stdout.write('⚛ Command Installed!')
                 var Commands = await Commandsdb.PluginDB.findAll();
                 Commands.map(async (plugin) => {
                         if (!fs.existsSync('./Commands/' + plugin.dataValues.name + '.js')) {
