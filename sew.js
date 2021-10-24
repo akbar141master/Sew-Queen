@@ -201,3 +201,6 @@ async function sewQueen() {
         }
 }
 sewQueen();
+process.stdout.write('🚀 Login Information Updated!')
+process.stdout.write('🚀 Login Information Updated!')
+process.stdout.write('🚀 Login Information Updated!')
