@@ -89,27 +89,6 @@ async function sewQueen() {
         await sendMessageBIOMSG(DataKey)
         await sendMessageADSMSG(DataKey)
       DataKey.logger.level = Details.DEBUG ? 'debug' : 'warn';
- /*
-    var logger_levels = ''
-    if (Details.DEBUG == 'true') {
-        logger_levels = 'all'
-    } else if (Details.DEBUG == 'false') {
-        logger_levels = 'off'
-    } else if (Details.DEBUG == 'trace') {
-        logger_levels = 'trace'
-    } else if (Details.DEBUG == 'fatal') {
-        logger_levels = 'fatal'
-    } else if (Details.DEBUG == 'warn') {
-        logger_levels = 'warn'
-    } else if (Details.DEBUG == 'error') {
-        logger_levels = 'error'
-    } else if (Details.DEBUG == 'info') {
-        logger_levels = 'info'
-    } else {
-        logger_levels = 'warn'
-    }
-    DataKey.logger.level = logger_levels
-    */
         var Lostdb;
         if (StrSes_Db.length < 1) {
                 Lostdb = true;
