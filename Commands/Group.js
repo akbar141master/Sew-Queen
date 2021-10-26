@@ -31,7 +31,7 @@ const { ReplyMessegedelete, sendMessageResetgroup, sendMessageJoingroup,
         sendMessageDimogroup, sendMessageMutegroup, sendMessageUnmutgroup, 
         sendMessageDpgroup, sendMessageGetstatus, sendMessageClearlist, sendMessageTextboom, 
         sendMessageMpboom, sendMessageJpboom, sendMessageStickboom, sendMessageVidboom, 
-        sendMessagecommgrp, sendMessagediffgrp } = require('../Function/dataa');
+        sendMessagecommgrp, sendMessagediffgrp } = require('sew-queen-pro/sources/dc/cmd/group');
 //const { sendMessagebadckickdata, sendMessageinbokickdata, sendMessagedatacopykick} = require('../Function/datab');
 
 async function checkUsAdmin(message, user = message.data.participant) {
