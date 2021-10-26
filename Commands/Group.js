@@ -10,8 +10,8 @@
 🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲🎲
 */ 
 let DataPack = require('sew-queen-pro');
-let SewQueen = DataPack.handler
-let Details = DataPack.details
+let SewQueen = require('sew-queen-pro/sources/dc/handler');
+let Details = require('sew-queen-pro/sources/dc/Details');
 let { MessageType, MessageOptions, Mimetype, GroupSettingChange, ChatModification, WAConnectionTest, WA_DEFAULT_EPHEMERAL } = require('@adiwajshing/baileys');
 let fs = require('fs');
 let os = require('os');
@@ -32,7 +32,7 @@ const { ReplyMessegedelete, sendMessageResetgroup, sendMessageJoingroup,
         sendMessageDpgroup, sendMessageGetstatus, sendMessageClearlist, sendMessageTextboom, 
         sendMessageMpboom, sendMessageJpboom, sendMessageStickboom, sendMessageVidboom, 
         sendMessagecommgrp, sendMessagediffgrp } = require('sew-queen-pro/sources/dc/cmd/group');
-//const { sendMessagebadckickdata, sendMessageinbokickdata, sendMessagedatacopykick} = require('../Function/datab');
+//const { sendMessagebadckickdata, sendMessageinbokickdata, sendMessagedatacopykick} = require('sew-queen-pro/sources/dc/cmd/bad');
 
 async function checkUsAdmin(message, user = message.data.participant) {
     var grup = await message.client.groupMetadata(message.jid);
