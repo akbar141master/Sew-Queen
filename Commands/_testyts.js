@@ -48,11 +48,15 @@ if (input[1] === '') return await message.sendMessage(DATA.NEED_URL + '.install 
     var response = await got(url);
     if (response.statusCode == 200) {
         var plugin_name = response.body.match(/IntroduceCMD\({.*pattern: ["'](.*)["'].*}/);
+        if (!plugin_name.length) {
         if (plugin_name.length >= 1) {
-            plugin_name = "__" + plugin_name[1];
+            plugin_name = "sewqueen__" + plugin_name[1];
         } else {
-            plugin_name = "__" + Math.random().toString(36).substring(8);
-        }
+            plugin_name = "sewqueen__" + Math.random().toString(36).substring(8);
+        } 
+        } else {
+            plugin_name = "sewqueen__" + Math.random().toString(36).substring(8);
+            }
 
         fs.writeFileSync('./Commands/' + plugin_name + '.js', response.body);
         try {
