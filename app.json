@@ -22,6 +22,10 @@
             "required": true,
             "value": "_*I'm Searching your song*_ ✨➾🔎"
         },
+        "THUMBNAIL_IMG": {
+            "description": "Add Your Thumbnail Image",
+            "required": false,
+        },
         "S_UP_SONG": {
             "description": "Song Uploading Msg",
             "required": true,
