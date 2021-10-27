@@ -27,8 +27,7 @@ let baseURI = '/apps/' + Details.HEROKU.APP_NAME;
 SewQueen['IntroduceCMD']({
         pattern: 'install ?(.*)', 
         fromMe: WorkType, 
-       dontAdCommandList: true,
-  //    disc: 💔
+       dontAdCommandList: true
         }, 
 (async (message, input) => { 
 if (input[1] === '') return await message.sendMessage(DATA.NEED_URL + '.install sew')
