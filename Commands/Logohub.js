@@ -14,7 +14,6 @@ let {sendMessagettplist, sendMessagettpres} = DataPack['ttpsend'];
 let {sendMessagelogolist} = DataPack['logolistsend'];
 let {sendMessagelogores, sendMessagepngres} = DataPack['logosend'];
 let WorkType = Details.WORKTYPE == 'public' ? false : true
-let 
 var LOGODISC = '';
 var des = '';
 if (Details.LANG == 'SI') {
@@ -29,32 +28,32 @@ SewQueen['IntroduceCMD']({
         fromMe: WorkType, 
         disc: 'ttp and sticker making command...\n*Usage:-* .ttp Sew'
        }, 
-(async (SR, getSR) => {
- await sendMessagettplist(SR, getSR)
+(async (QueenSew, input) => {
+ await sendMessagettplist(QueenSew, input)
 }));
 SewQueen['IntroduceCMD']({
         pattern: 'png ?(.*)', 
         fromMe: WorkType, 
         disc: des
         }, 
-(async (SR, getSR) => { 
-await sendMessagepngres(SR, getSR)
+(async (QueenSew, input) => { 
+await sendMessagepngres(QueenSew, input)
 })); 
 SewQueen['IntroduceCMD']({
         pattern: 'respondlisttextmaker ?(.*)', 
         fromMe: WorkType, 
         dontAdCommandList: true,
         }, 
-(async (SR, getSR) => { 
-await sendMessagelogores(SR, getSR)
+(async (QueenSew, input) => { 
+await sendMessagelogores(QueenSew, input)
 })); 
 SewQueen['IntroduceCMD']({
         pattern: 'logo ?(.*)', 
         fromMe: WorkType, 
         disc: LOGODISC
         }, 
-(async (SR, getSR) => { 
-await sendMessagelogolist(SR, getSR)
+(async (QueenSew, input) => { 
+await sendMessagelogolist(QueenSew, input)
 })); 
 
 SewQueen['IntroduceCMD']({
@@ -62,6 +61,6 @@ SewQueen['IntroduceCMD']({
         fromMe: WorkType, 
         dontAdCommandList: true
         }, 
-(async (SR, getSR) => { 
-await sendMessagettpres(SR, getSR)
+(async (QueenSew, input) => { 
+await sendMessagettpres(QueenSew, input)
 }));
