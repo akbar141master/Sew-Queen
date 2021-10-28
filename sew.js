@@ -25,6 +25,7 @@ let { DataTypes } = require('sequelize');
 let { getMessage } = require("./DataBase/greetings");
 let Heroku = require('heroku-client');
 let simpleGit = require('simple-git');
+let consolemsg = 'test'
 let heroku = new Heroku({
     token: Details.HEROKU.API_KEY
 });
@@ -97,6 +98,7 @@ async function sewQueen() {
                 DataKey.loadAuthInfo(Session.deCrypt(StrSes_Db[0].dataValues.value));
         }
         DataKey.on('credentials-updated', async () => {
+            console.log(consolemsg)
                 console.log(
                         chalk.blueBright.italic('🚀 Login Information Updated!'));
            
