@@ -68,7 +68,7 @@ SewQueen['IntroduceCMD'({
         desc: DEL_DESC},
 (async (QueenSEW, input) => {
 await ReplyMessegedelete(QueenSEW, input)
-}));
+}))
 //================================ʙᴏᴏᴍ=========
 SewQueen['IntroduceCMD'({
         pattern: 'boomtext ?(.*)',
