@@ -1,5 +1,4 @@
 /* 
-
 Sew Queen Whatsapp Bot    
 
 Telegram: https://t.me/RavinduManoj
@@ -7,7 +6,6 @@ Facebook: https://www.facebook.com/ravindu.manoj.79
 Licensed under the  GPL-3.0 License;
 
 Coded By Ravindu Manoj
-
 */
 let DataPack = require('sew-queen-pro');
 let SewQueen = require('sew-queen-pro/sources/dc/handler');
@@ -25,7 +23,6 @@ let { DataTypes } = require('sequelize');
 let { getMessage } = require("./DataBase/greetings");
 let Heroku = require('heroku-client');
 let simpleGit = require('simple-git');
-let consolemsg = 'test'
 let heroku = new Heroku({
     token: Details.HEROKU.API_KEY
 });
@@ -76,7 +73,6 @@ Array.prototype.remove = function () {
         return this;
 };
 async function sewQueen() {
-    console.log('test')
         await Details.DATABASE.sync();
         var StrSes_Db = await SewQueenDB.findAll({
                 where: {
@@ -98,10 +94,6 @@ async function sewQueen() {
                 DataKey.loadAuthInfo(Session.deCrypt(StrSes_Db[0].dataValues.value));
         }
         DataKey.on('credentials-updated', async () => {
-            console.log(consolemsg)
-                console.log(
-                        chalk.blueBright.italic('🚀 Login Information Updated!'));
-           
                 let authInfo = DataKey.base64EncodedAuthInfo();
                 if (StrSes_Db.length < 1) {
                         await SewQueenDB.create({
@@ -120,21 +112,21 @@ async function sewQueen() {
     ${chalk.blue.italic('🇱🇰 Try To Login WhatsApp... Please Wait...')}`);
         });
         DataKey.on('open', async () => {
-                console.log(chalk.green.bold('⚛ Login successful!'));
-                console.log(chalk.blueBright.italic('✧✧ Installing External Commands...'));
+               // console.log(chalk.green.bold('⚛ Login successful!'));
+              //  console.log(chalk.blueBright.italic('✧✧ Installing External Commands...'));
                 console.log(chalk.blueBright.italic('❯❯❯PASSWORD CHECKING❮❮❮'));
                 if (Details.SEWRR == 'raviya') {
                         console.log(chalk.green.bold('✯✯Password Done✯✯'))
                 } else if (Details.SEWRR !== 'raviya') {
-                        console.log(chalk.red.bold('⚠⚠Password Incorrect⚠⚠'));
-                        console.log(chalk.red.bold('⚠⚠Password Incorrect⚠⚠'));
-                        console.log(chalk.red.bold('⚠⚠Password Incorrect⚠⚠'));
-                        console.log(chalk.red.bold('⚠⚠Password Incorrect⚠⚠'));
+                        throw new Error("Wrong password !!");
+                        throw new Error("Wrong password !!");
+                        throw new Error("Wrong password !!");
+                        throw new Error("Wrong password !!");
                         throw new Error("Wrong password !!");
                         return;
                 }
-                console.log(chalk.blueBright.italic('✧✧ Installing External Commands...'));
-                console.log(chalk.blueBright.italic('⚛ Command Installed!'));
+             //   console.log(chalk.blueBright.italic('✧✧ Installing External Commands...'));
+             //   console.log(chalk.blueBright.italic('⚛ Command Installed!'));
       
                 var Commands = await Commandsdb.PluginDB.findAll();
                 Commands.map(async (plugin) => {
