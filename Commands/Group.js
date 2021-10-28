@@ -26,6 +26,7 @@ let WorkType = Details.WORKTYPE == 'public' ? false : true
 let { thumbnail } = require('../media/thumbnail');  
 let SEWA = 'need word'
 let SEWB = 'Successfully Changed'
+let CLR_DESC = 'Chat clear'
 const { ReplyMessegedelete, sendMessageResetgroup, sendMessageJoingroup,
         sendMessageKickgroup, sendMessageAddgroup, sendMessagePromogroup,
         sendMessageDimogroup, sendMessageMutegroup, sendMessageUnmutgroup, 
