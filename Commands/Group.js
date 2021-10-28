@@ -62,7 +62,7 @@ SewQueen['IntroduceCMD']({
 }));
 // ===============================ᴅᴇʟᴇᴛᴇ==========
 const DEL_DESC = "Deletes The Replied Message Send By The Bot"
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'del ?(.*)',
         fromMe: RS,
         desc: DEL_DESC},
@@ -70,7 +70,7 @@ SewQueen['IntroduceCMD'({
 await ReplyMessegedelete(QueenSEW, input)
 }))
 //================================ʙᴏᴏᴍ=========
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'boomtext ?(.*)',
         fromMe: true,
         dontAdCommandList: true},
@@ -106,7 +106,7 @@ await sendMessageTextboom(QueenSEW, input)
 await sendMessageTextboom(QueenSEW, input)
 await sendMessageTextboom(QueenSEW, input)
 }));
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'boomaudio$',
         fromMe: true,
         dontAdCommandList: true},
@@ -142,7 +142,7 @@ await sendMessageMpboom(QueenSEW, input)
 await sendMessageMpboom(QueenSEW, input)
 await sendMessageMpboom(QueenSEW, input)
 }));
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'boomphoto$',
         fromMe: true,
         dontAdCommandList: true},
@@ -178,7 +178,7 @@ await sendMessageJpboom(QueenSEW, input)
 await sendMessageJpboom(QueenSEW, input)
 await sendMessageJpboom(QueenSEW, input)
 }));
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'boomstic$',
         fromMe: true,
         dontAdCommandList: true },
@@ -215,7 +215,7 @@ await sendMessageStickboom(QueenSEW, input)
 await sendMessageStickboom(QueenSEW, input)
 }));
 
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'boomvid$',
         fromMe: true,
         dontAdCommandList: true },
@@ -252,7 +252,7 @@ await sendMessageVidboom(QueenSEW, input)
 await sendMessageVidboom(QueenSEW, input)
 }));
 //================================ᴄʟᴇᴀʀ=========
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'clear ?(.*)',
         fromMe: true,
         desc: CLR_DESC,
@@ -261,7 +261,7 @@ SewQueen['IntroduceCMD'({
  await sendMessageClearlist(QueenSEW, input)
 }));
 //================================ꜱᴛᴀᴛᴜꜱ=========
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'getst$',
         fromMe: true,
         dontAdCommandList: true},
@@ -314,14 +314,14 @@ SewQueen['IntroduceCMD']({
 (async (QueenSEW, input) => { 
 await sendMessagediffgrp(QueenSEW, input)
 })); 
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'join ?(.*)',
         fromMe: true,
         dontAdCommandList: true},
 (async (QueenSEW, input) => {  
 await sendMessageJoingroup(QueenSEW, input)
     }));
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'reset ?(.*)',
         fromMe: true,
         dontAdCommandList: true,
@@ -329,7 +329,7 @@ SewQueen['IntroduceCMD'({
 (async (QueenSEW, input) => {  
 await sendMessageResetgroup(QueenSEW, input)
   }));
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'kick ?(.*)',
         fromMe: true,
         dontAdCommandList: true,
@@ -337,7 +337,7 @@ SewQueen['IntroduceCMD'({
 (async (QueenSEW, input) => {  
 await sendMessageKickgroup(QueenSEW, input)
 }));
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'add(?: |$)(.*)',
         fromMe: true,
         dontAdCommandList: true,
@@ -345,7 +345,7 @@ SewQueen['IntroduceCMD'({
 (async (QueenSEW, input) => {  
 await sendMessageAddgroup(QueenSEW, input)
 }));
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'promote ?(.*)',
         fromMe: true,
         dontAdCommandList: true,
@@ -354,7 +354,7 @@ SewQueen['IntroduceCMD'({
 await sendMessagePromogroup(QueenSEW, input)
 }));
 
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'demote ?(.*)',
         fromMe: true,
         dontAdCommandList: true,
@@ -363,7 +363,7 @@ SewQueen['IntroduceCMD'({
 await sendMessageDimogroup(QueenSEW, input)
 }));
 
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'mute ?(.*)',
         fromMe: true,
         dontAdCommandList: true,
@@ -372,7 +372,7 @@ SewQueen['IntroduceCMD'({
 await sendMessagesendMessageMutegroup(QueenSEW, input)
 }));
 
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'unmute ?(.*)',
         fromMe: true,
         dontAdCommandList: true,
@@ -381,7 +381,7 @@ SewQueen['IntroduceCMD'({
 await sendMessagesendMessageUnmutgroup(QueenSEW, input)
 }));
 
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'invite ?(.*)',
         fromMe: true,
         dontAdCommandList: true,
@@ -392,7 +392,7 @@ SewQueen['IntroduceCMD'({
     var invite = await QueenSEW.client.groupInviteCode(QueenSEW.jid);
     await QueenSEW.client.sendMessage(QueenSEW.jid,Lang.INVITE + ' https://chat.whatsapp.com/' + invite, MessageType.text);
 }));
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'name ?(.*)',
         onlyGrpSew: true,
         fromMe: true,
@@ -406,7 +406,7 @@ SewQueen['IntroduceCMD'({
     }
 ));
 
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'dp',
         fromMe: true,
         dontAdCommandList: true,
@@ -417,7 +417,7 @@ await sendMessageDpgroup(QueenSEW, input)
 
 if (Details.GRPMANAGE == 'true') {
 
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'reset ?(.*)',
         fromMe: false,
         dontAdCommandList: true,
@@ -427,7 +427,7 @@ var us = await checkUsAdmin(QueenSEW)
 if (!us) return;
 await sendMessageResetgroup(QueenSEW, input)
   }));
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'kick ?(.*)',
         fromMe: false,
         dontAdCommandList: true,
@@ -437,7 +437,7 @@ var us = await checkUsAdmin(QueenSEW)
 if (!us) return;
 await sendMessageKickgroup(QueenSEW, input)
 }));
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'add(?: |$)(.*)',
         fromMe: false,
         dontAdCommandList: true,
@@ -447,7 +447,7 @@ var us = await checkUsAdmin(QueenSEW)
 if (!us) return;
 await sendMessageAddgroup(QueenSEW, input)
 }));
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'promote ?(.*)',
         fromMe: false,
         dontAdCommandList: true,
@@ -458,7 +458,7 @@ if (!us) return;
 await sendMessagePromogroup(QueenSEW, input)
 }));
 
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'demote ?(.*)',
         fromMe: false,
         dontAdCommandList: true,
@@ -469,7 +469,7 @@ if (!us) return;
 await sendMessageDimogroup(QueenSEW, input)
 }));
 
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'mute ?(.*)',
         fromMe: false,
         dontAdCommandList: true,
@@ -480,7 +480,7 @@ if (!us) return;
 await sendMessageMutegroup(QueenSEW, input)
 }));
 
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'unmute ?(.*)',
         fromMe: false,
         dontAdCommandList: true,
@@ -491,7 +491,7 @@ if (!us) return;
 await sendMessageUnmutgroup(QueenSEW, input)
 }));
 
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'invite ?(.*)',
         fromMe: false,
         dontAdCommandList: true,
@@ -504,7 +504,7 @@ if (!us) return;
     var invite = await QueenSEW.client.groupInviteCode(QueenSEW.jid);
     await QueenSEW.client.sendMessage(QueenSEW.jid,Lang.INVITE + ' https://chat.whatsapp.com/' + invite, MessageType.text);
 }));
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'name ?(.*)',
         onlyGrpSew: true,
         fromMe: false,
@@ -520,7 +520,7 @@ if (!us) return;
     }
 ));
 
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'dp',
         fromMe: false,
         dontAdCommandList: true,
@@ -553,7 +553,7 @@ if (!us) return;
 await sendMessagediffgrp(QueenSEW, input)
 })); 
 if (Details.LANG == 'EN') {
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'admin$',
         fromMe: false,
         dekownsewcmd: false,
@@ -632,7 +632,7 @@ if (!us) return;
     }));
 }
 if (Details.LANG == 'SI') {
-SewQueen['IntroduceCMD'({
+SewQueen['IntroduceCMD']({
         pattern: 'admin$',
         fromMe: false,
         dekownsewcmd: false,
