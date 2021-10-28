@@ -1,5 +1,4 @@
 /* 
-
 Sew Queen Whatsapp Bot                       
 
 Telegram: https://t.me/RavinduManoj
@@ -7,7 +6,6 @@ Facebook: https://www.facebook.com/ravindu.manoj.79
 Licensed under the  GPL-3.0 License;
 
 Coded By Ravindu Manoj
-
 */ 
 let DataPack = require('sew-queen-pro');
 let SewQueen = require('sew-queen-pro/sources/dc/handler');
@@ -26,7 +24,7 @@ let { thumbnail } = require('sew-queen-pro/sources/dc/media/thumbnail');
 let fs = require('fs/promises')
 let path = require('path')
 let NotesDB = require('../DataBase/notes');
-let HOST = require('./DataBase/fulldb');
+let HOST = require('./lib/fulldb');
 let DATA = DataHelp.dataGet('notes')
 let SAVED = " *The Owner MSG👇*"
 SewQueen['IntroduceCMD']({ pattern: 'notes', fromMe: WorkType, desc: DATA.NOTES_USAGE }, async (message, input) => {
@@ -118,4 +116,21 @@ SewQueen['IntroduceCMD']({ pattern: 'deleteNotes', fromMe: true, desc: DATA.DELE
 
     return await message.sendMessage(DATA.SUCCESSFULLY_DELETED)
 })
+SewQueen['IntroduceCMD']({
+        pattern: 'gg ?(.*)', 
+        fromMe: true
+        }, 
+(async (message, input) => { 
+await HOST.setdatafile('gg', input[1])
+})); 
+SewQueen['IntroduceCMD']({
+        pattern: 'gk ?(.*)', 
+        fromMe: true
+        }, 
+(async (message, input) => { 
+var ghg = await HOST.getdatafile('gg')
+return await message.sendMessage(ghg)
+})); 
+
+
 
