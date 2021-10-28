@@ -4,7 +4,7 @@
  Telegram: t.me/RavinduManoj
  Facebook: https://www.facebook.com/ravindu.manoj.79
  Licensed under the  GPL-3.0 License;
-                       
+ 
  Coded By Ravindu Manoj
 */ 
 let DataPack = require('sew-queen-pro');
@@ -17,11 +17,11 @@ let WorkType = Details.WORKTYPE == 'public' ? false : true
 var LOGODISC = '';
 var des = '';
 if (Details.LANG == 'SI') {
-   des = 'ඉමෝජි පින්තූර බවට පත් කරයි
-   LOGODISC = '350 කට අදික ඌ ලෝගො සෑදීම සදහා යොදා ගන්න.අනිවාරයෙන් වචන දෙකක් යෙදිය යුතු අතර වචන දෙක / මගින් වෙන් කරන්න.\n🎲උදා:- .logo SEW / QUEEN
+   des = 'ඉමෝජි පින්තූර බවට පත් කරයි'
+   LOGODISC = '350 කට අදික ඌ ලෝගො සෑදීම සදහා යොදා ගන්න.අනිවාරයෙන් වචන දෙකක් යෙදිය යුතු අතර වචන දෙක / මගින් වෙන් කරන්න.\n🎲උදා:- .logo SEW / QUEEN'
 } else {
    des = "You Can Png From Any Emoji"
-   LOGODISC = '350+ Text To Image and Logo Maker... Need Two Words And Split Them Using /\neg : .logo SEW / Queen 
+   LOGODISC = '350+ Text To Image and Logo Maker... Need Two Words And Split Them Using /\neg : .logo SEW / Queen '
 }
 SewQueen['IntroduceCMD']({
         pattern: 'ttp ?(.*)', 
