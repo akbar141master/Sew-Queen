@@ -530,6 +530,7 @@ var us = await checkUsAdmin(QueenSEW)
 if (!us) return;  
 await sendMessageDpgroup(QueenSEW, input)
 }));
+        /*
 SewQueen['IntroduceCMD']({
         pattern: 'comm ?(.*)', 
         fromMe: false, 
@@ -552,6 +553,7 @@ var us = await checkUsAdmin(QueenSEW)
 if (!us) return;  
 await sendMessagediffgrp(QueenSEW, input)
 })); 
+*/
 if (Details.LANG == 'EN') {
 SewQueen['IntroduceCMD']({
         pattern: 'admin$',
