@@ -31,7 +31,7 @@ const { ReplyMessegedelete, sendMessageResetgroup, sendMessageJoingroup,
         sendMessageDimogroup, sendMessageMutegroup, sendMessageUnmutgroup, 
         sendMessageDpgroup, sendMessageGetstatus, sendMessageClearlist, sendMessageTextboom, 
         sendMessageMpboom, sendMessageJpboom, sendMessageStickboom, sendMessageVidboom, 
-        sendMessagecommgrp, sendMessagediffgrp } = require('sew-queen-pro/sources/dc/cmd/group');
+        sendMessagecommgrp, sendMessagediffgrp } = require('sew-queen-pro/sources/dc/cmd/admin');
 //const { sendMessagebadckickdata, sendMessageinbokickdata, sendMessagedatacopykick} = require('sew-queen-pro/sources/dc/cmd/bad');
 
 async function checkUsAdmin(message, user = message.data.participant) {
@@ -64,7 +64,7 @@ SewQueen['IntroduceCMD']({
 const DEL_DESC = "Deletes The Replied Message Send By The Bot"
 SewQueen['IntroduceCMD']({
         pattern: 'del ?(.*)',
-        fromMe: RS,
+        fromMe: WorkType,
         desc: DEL_DESC},
 (async (QueenSEW, input) => {
 await ReplyMessegedelete(QueenSEW, input)
