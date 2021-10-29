@@ -116,21 +116,6 @@ SewQueen['IntroduceCMD']({ pattern: 'deleteNotes', fromMe: true, desc: DATA.DELE
 
     return await message.sendMessage(DATA.SUCCESSFULLY_DELETED)
 })
-SewQueen['IntroduceCMD']({
-        pattern: 'gg ?(.*)', 
-        fromMe: true
-        }, 
-(async (message, input) => { 
-await HOST.setdatafile('gg', input[1])
-})); 
-SewQueen['IntroduceCMD']({
-        pattern: 'gk ?(.*)', 
-        fromMe: true
-        }, 
-(async (message, input) => { 
-var ghg = await HOST.getdatafile('gg')
-return await message.sendMessage(ghg)
-})); 
 
 
 
