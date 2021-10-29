@@ -116,19 +116,15 @@ if (Details.LANG == 'SI') ADMİN_USER = '✪\n✨➢ *පරිපාලකව�
         }
     });
 
-    SewQueen['IntroduceCMD']({pattern: 'id ?(.*)', fromMe: WorkType, desc: DATA.JID_DESC, dontAddCMDList: true}, (async (message, input) => {    
+    SewQueen['IntroduceCMD']({pattern: 'jid ?(.*)', fromMe: WorkType, desc: DATA.JID_DESC, dontAddCMDList: true}, (async (message, input) => {    
         if (message.reply_message !== false) {
-            await message.client.sendMessage(message.jid, DATA.JID.format(message.reply_message.jid.split('@')[0], message.reply_message.jid), MessageType.text, {
-                quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
-            });
+            await message.client.sendMessage(message.jid, message.reply_message.jid, MessageType.text);
         } else if (message.mention !== false) {
             message.mention.map(async user => {
-                await message.client.sendMessage(message.jid, DATA.JID.format(user.split('@')[0], user), MessageType.text, {
-                    contextInfo: {mentionedJid: [user.replace('c.us', 's.whatsapp.net')]}
-                });    
+                await message.client.sendMessage(message.jid, user, MessageType.text)
             });
         } else {
-            await message.client.sendMessage(message.jid,message.jidsplit('@')[0], MessageType.text);
+            await message.client.sendMessage(message.jid,message.jid, MessageType.text);
         }
     }));
     
