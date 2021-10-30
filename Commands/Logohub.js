@@ -11,7 +11,8 @@ let DataPack = require('sew-queen-pro');
 let SewQueen = require('sew-queen-pro/sources/dc/handler');
 let Details = require('sew-queen-pro/sources/dc/Details');
 let {sendMessagettplist, sendMessagettpres} = DataPack['ttpsend'];
-let {sendMessagelogolist} = DataPack['logolistsend'];
+
+let {sendMessagelogolist} = require('sew-queen-pro/sources/dc/cmd/TextList')
 let {sendMessagelogores, sendMessagepngres} = DataPack['logosend'];
 let WorkType = Details.WORKTYPE == 'public' ? false : true
 var LOGODISC = '';
