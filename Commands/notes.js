@@ -24,7 +24,6 @@ let { thumbnail } = require('sew-queen-pro/sources/dc/media/thumbnail');
 let fs = require('fs/promises')
 let path = require('path')
 let NotesDB = require('../DataBase/notes');
-let HOST = require('./lib/fulldb');
 let DATA = DataHelp.dataGet('notes')
 let SAVED = " *The Owner MSG👇*"
 SewQueen['IntroduceCMD']({ pattern: 'notes', fromMe: WorkType, desc: DATA.NOTES_USAGE }, async (message, input) => {
