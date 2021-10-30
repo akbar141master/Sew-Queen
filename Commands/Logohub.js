@@ -48,7 +48,7 @@ SewQueen['IntroduceCMD']({
 await sendMessagelogores(QueenSew, input)
 })); 
 SewQueen['IntroduceCMD']({
-        pattern: 'logo ?(.*)', 
+        pattern: 'textlogo ?(.*)', 
         fromMe: WorkType, 
         disc: LOGODISC
         }, 
