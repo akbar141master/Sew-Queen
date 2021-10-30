@@ -66,20 +66,9 @@
             "required": true,
             "value": "true"
         },
-        "BIO_A": {
+        "BIO": {
             "description": "Frist Bio For Auto Bio",
-            "required": true,
-            "value": "🎲If You Think You Are Bad 🤣.. Broo I Am Your Dad☠️"
-        },
-        "BIO_B": {
-            "description": "sec Bio For Auto Bio",
-            "required": true,
-            "value": "Dear Devil🤡 Come For Me☠️"
-        },
-        "BIO_C": {
-            "description": "3rd Bio For Auto Bio",
-            "required": true,
-            "value": "Try To Find Life....💝   Loading....♣️  ERROR :( 🙂 ):  BUT LOVE IS NAVER DIE 🙂"
+            "required": false
         },
         "ALIVE_LOGO": {
             "description": "Add Your Alive Logo",
