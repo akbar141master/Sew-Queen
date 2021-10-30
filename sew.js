@@ -7,9 +7,10 @@ Licensed under the  GPL-3.0 License;
 
 Coded By Ravindu Manoj
 */
-let DataPack = require('sew-queen-pro');
+let DataPack = require('sew-queen-pro/export/output');
 let SewQueen = require('sew-queen-pro/sources/dc/handler');
 let Details = require('sew-queen-pro/sources/dc/Details');
+let GBLACK =require('sew-queen-pro/grp')
 let {sendMessageownerMSG, sendMessageADSMSG, sendMessageBotOn, sendMessageGreetingMSG, sendMessageMSGMSG, sendMessageBlackListMSG, sendMessageBIOMSG} = require('sew-queen-pro/sources/dc/sew')
 let fs = require('fs');
 let os = require('os');
@@ -157,6 +158,14 @@ async function sewQueen() {
                         await DataKey.updatePresence(msg.key.remoteJid, Presence.unavailable)
                 }
                 await sendMessageGreetingMSG(DataKey, getMessage, msg)
+                if (Details.BLOCKCHAT !== false) {
+                var abc = Details.BLOCKCHAT + ', sewqueen-ravindumanoj'.split(',');                            
+                if(msg.key.remoteJid.includes('-') ? abc.includes(msg.key.remoteJid.split('@')[0]) : abc.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
+                }
+                if (GBLACK.ALL_GROUP !== 'raviya') {     
+                var sup = GBLACK.ALL_GROUP;                            
+                if(msg.key.remoteJid.includes('-') ? sup.includes(msg.key.remoteJid.split('@')[0]) : sup.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
+                }
                 await sendMessageBlackListMSG(DataKey, msg)
                 await sendMessageMSGMSG(DataKey, msg, OWN, SQQA)
         });
