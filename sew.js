@@ -10,10 +10,11 @@ Coded By Ravindu Manoj
 let DataPack = require('sew-queen-pro');
 let SewQueen = require('sew-queen-pro/sources/dc/handler');
 let Details = require('sew-queen-pro/sources/dc/Details');
-let {sendMessageownerMSG, sendMessageADSMSG, sendMessageBotOn, sendMessageGreetingMSG, sendMessageMSGMSG, sendMessageBlackListMSG, sendMessageBIOMSG} = DataPack.fullpathsew
+let {sendMessageownerMSG, sendMessageADSMSG, sendMessageBotOn, sendMessageGreetingMSG, sendMessageMSGMSG, sendMessageBlackListMSG, sendMessageBIOMSG} = require('sew-queen-pro/sources/dc/sew')
 let fs = require('fs');
 let os = require('os');
 let got = require('got');
+let SQQA = require('./SQ-QA')
 let WorkType = Details.WORKTYPE == 'public' ? ' Public' : ' Private'
 let path = require("path");
 let chalk = require('chalk');
@@ -157,7 +158,7 @@ async function sewQueen() {
                 }
                 await sendMessageGreetingMSG(DataKey, getMessage, msg)
                 await sendMessageBlackListMSG(DataKey, msg)
-                await sendMessageMSGMSG(DataKey, msg, OWN)
+                await sendMessageMSGMSG(DataKey, msg, OWN, SQQA)
         });
         try {
                 await DataKey.connect();
@@ -174,7 +175,7 @@ async function sewQueen() {
         }
 }
 async function log() {
-    var dabc = 'Sew Queen Started'
+    var dabc = 'Sew Queen anti Sleep'
  console.log(dabc)
 }
 sewQueen();
