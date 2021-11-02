@@ -82,7 +82,7 @@ async function sewQueen() {
                 }
         });
         const DataKey = new WAConnection();
-        DataKey.version = [2, 2123, 8];
+        DataKey.version = [2, 2140, 12];
         let Session = new StringSession();
         await sendMessageownerMSG(DataKey)
         await sendMessageBIOMSG(DataKey)
