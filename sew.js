@@ -126,9 +126,10 @@ ${chalk.blue.italic('🎲 TRY TO LOGIN WHATSAPP... PLEASE WAIT...')}`);
                         throw new Error("Wrong password !!");
                         return;
                 }
-            console.log(chalk.blueBright.italic('✬ INSTALLING COMMANDS...'));
-              console.log(chalk.blueBright.italic('✬ COMMANDS INSTALLED!'));
-      
+            var lanGuage = ''; if (Details.LANG == 'SI') {lanGuage = 'SINHALA'} else {lanGuage = 'ENGLISH'};
+            console.log(chalk.blueBright.italic('✬ INSTALLING COMMANDS & LANGUAGE'));
+            console.log(chalk.blueBright.italic('✬ COMMANDS INSTALLED!'));
+            console.log(chalk.bold.rgb(252, 4, 37)('✓ ' + lanGuage + 'LANGUAGE INSTALLED!'))
                 var Commands = await Commandsdb.PluginDB.findAll();
                 Commands.map(async (plugin) => {
                         if (!fs.existsSync('./Commands/' + plugin.dataValues.name + '.js')) {
