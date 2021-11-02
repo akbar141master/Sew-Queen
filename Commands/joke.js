@@ -58,8 +58,8 @@ SewQueen['IntroduceCMD']({pattern: 'quote ?(.*)', fromMe: WorkType, desc: QUOTE_
 });
 
 SewQueen['IntroduceCMD']({pattern: 'alive ?(.*)', fromMe: false, desc: QUOTE_DESC}, async (message, input) => {
- await message.client.sendMessage(message.jid, '*i,m alive now*', MessageType.text
+ await message.client.sendMessage(message.jid, '*i,m alive now*', MessageType.text)
 });
 SewQueen['IntroduceCMD']({pattern: 'help ?(.*)', fromMe: WorkType, desc: QUOTE_DESC}, async (message, input) => {
- await message.client.sendMessage(message.jid, '*no details added*', MessageType.text
+ await message.client.sendMessage(message.jid, '*no details added*', MessageType.text)
 });
