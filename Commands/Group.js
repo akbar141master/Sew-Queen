@@ -23,7 +23,7 @@ let {execFile} = require('child_process');
 let cwebp = require('cwebp-bin');
 let Language = DataPack.constdata
 let WorkType = Details.WORKTYPE == 'public' ? false : true
-let { thumbnail } = require('../media/thumbnail');  
+let { thumbnail } = require('sew-queen-pro/sources/dc/media/thumbnail');  
 let SEWA = 'need word'
 let SEWB = 'Successfully Changed'
 let CLR_DESC = 'Chat clear'
