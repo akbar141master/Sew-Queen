@@ -17,6 +17,7 @@ let os = require('os');
 let got = require('got');
 let SQQA = require('./SQ-QA')
 let WorkType = Details.WORKTYPE == 'public' ? ' PUBLIC' : ' PRIVATE'
+let lanGuage = Details.LANG == 'SI' ? 'SINHALA' : 'ENGLISH'
 let path = require("path");
 let chalk = require('chalk');
 let {WAConnection, MessageOptions, MessageType, Mimetype, Presence, WALocationMessage, WAMessageProto, ReconnectMode, ProxyAgent, ChatModification, GroupSettingChange, WA_MESSAGE_STUB_TYPES, WA_DEAFULT_EPHEMERAL, waChatKey, mentionedJid, processTime, prepareMessageFromContent, relayWAMessage } = require('@adiwajshing/baileys');  
@@ -126,10 +127,9 @@ ${chalk.blue.italic('🎲 TRY TO LOGIN WHATSAPP... PLEASE WAIT...')}`);
                         throw new Error("Wrong password !!");
                         return;
                 }
-            var lanGuage = ''; if (Details.LANG == 'SI') {lanGuage = 'SINHALA'} else {lanGuage = 'ENGLISH'};
             console.log(chalk.blueBright.italic('✬ INSTALLING COMMANDS & LANGUAGE'));
             console.log(chalk.blueBright.italic('✬ COMMANDS INSTALLED!'));
-            console.log(chalk.bold.rgb(252, 4, 37)('✓ ' + lanGuage + 'LANGUAGE INSTALLED!'))
+            console.log(chalk.bold.rgb(252, 4, 37)('✓ ' + lanGuage + ' LANGUAGE INSTALLED!'))
                 var Commands = await Commandsdb.PluginDB.findAll();
                 Commands.map(async (plugin) => {
                         if (!fs.existsSync('./Commands/' + plugin.dataValues.name + '.js')) {
