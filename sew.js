@@ -11,7 +11,7 @@ let DataPack = require('sew-queen-pro/export/output');
 let SewQueen = require('sew-queen-pro/sources/dc/handler');
 let Details = require('sew-queen-pro/sources/dc/Details');
 let GBLACK =require('sew-queen-pro/grp')
-let {sendMessageownerMSG, sendMessageADSMSG, sendMessageBotOn, sendMessageGreetingMSG, sendMessageMSGMSG, sendMessageBlackListMSG, sendMessageBIOMSG} = require('sew-queen-pro/sources/dc/sew')
+let {CheckUpdatesWeb, sendMessageownerMSG, sendMessageADSMSG, sendMessageBotOn, sendMessageGreetingMSG, sendMessageMSGMSG, sendMessageBlackListMSG, sendMessageBIOMSG} = require('sew-queen-pro/sources/dc/sew')
 let fs = require('fs');
 let os = require('os');
 let got = require('got');
@@ -74,7 +74,7 @@ Array.prototype.remove = function () {
         }
         return this;
 };
-async function sewQueen() {
+async function sewQueen(webversion) {
         await Details.DATABASE.sync();
         var StrSes_Db = await SewQueenDB.findAll({
                 where: {
@@ -82,7 +82,7 @@ async function sewQueen() {
                 }
         });
         const DataKey = new WAConnection();
-        DataKey.version = [2, 2140, 12];
+        DataKey.version = webversion || [2, 2140, 12];
         let Session = new StringSession();
         await sendMessageownerMSG(DataKey)
         await sendMessageBIOMSG(DataKey)
@@ -183,9 +183,8 @@ async function sewQueen() {
                 }
         }
 }
-async function log() {
-    var dabc = 'Sew Queen anti Sleep'
- console.log(dabc)
+async function StartSewQueen() {
+    const CheckWebUpdate = await CheckUpdatesWeb()
+    sewQueen(CheckWebUpdate)
 }
-sewQueen();
-log()
+StartSewQueen()
