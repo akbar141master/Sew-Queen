@@ -30,7 +30,7 @@
     "axios": "0.21.1",
     "googlethis": "^1.1.6",
     "chalk": "^4.1.0",
-    "check-path": "1.0.6",
+    "check-path": "1.0.7",
     "deepai": "^1.0.17",
     "fs-extra": "^9.1.0",
     "google-tts-api": "^2.0.2",
