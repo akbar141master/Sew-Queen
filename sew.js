@@ -114,10 +114,10 @@ ${chalk.white.bold('Version:')} ${chalk.red.bold(Details.VERSION)}
 ${chalk.blue.italic('🎲 TRY TO LOGIN WHATSAPP... PLEASE WAIT...')}`);
         });
         DataKey.on('open', async () => {
-                console.log(chalk.bold.rgb(238, 7, 230)('✬LOGIN SUCCESSFUL!'));
-                console.log(chalk.blueBright.italic('⚓PASSWORD CHECKING⚓'));
+                console.log(chalk.bold.rgb(238, 7, 230)('✬ LOGIN SUCCESSFUL!'));
+                console.log(chalk.blueBright.italic('⚓ PASSWORD CHECKING⚓'));
                 if (Details.SEWRR == 'raviya') {
-                        console.log(chalk.green.bold('✯PASSWORD VERIFIED✯'))
+                        console.log(chalk.green.bold('✯ PASSWORD VERIFIED✯'))
                 } else if (Details.SEWRR !== 'raviya') {
                         throw new Error("Wrong password !!");
                         throw new Error("Wrong password !!");
@@ -126,8 +126,8 @@ ${chalk.blue.italic('🎲 TRY TO LOGIN WHATSAPP... PLEASE WAIT...')}`);
                         throw new Error("Wrong password !!");
                         return;
                 }
-            console.log(chalk.blueBright.italic('✬INSTALLING COMMANDS...'));
-              console.log(chalk.blueBright.italic('COMMANDS INSTALLED!'));
+            console.log(chalk.blueBright.italic('✬ INSTALLING COMMANDS...'));
+              console.log(chalk.blueBright.italic('✬ COMMANDS INSTALLED!'));
       
                 var Commands = await Commandsdb.PluginDB.findAll();
                 Commands.map(async (plugin) => {
@@ -146,6 +146,7 @@ ${chalk.blue.italic('🎲 TRY TO LOGIN WHATSAPP... PLEASE WAIT...')}`);
                                 require('./Commands/' + plugin);
                         }
                 });
+                console.log(chalk.bold.rgb(238, 7, 230)('🇱🇰 SRI LANKA 🇱🇰'));
                 console.log(chalk.green.bold('🎲 SEW QUEEN IS' + WorkType + ' 🎲'));
                 await sendMessageBotOn(DataKey)
         })
