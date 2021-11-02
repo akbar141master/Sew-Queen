@@ -5,5 +5,5 @@ WORKDIR /root/QueenSewWhatsappBot/
 ENV TZ=Asia/Colombo
 RUN npm install supervisor -g
 RUN yarn install --no-audit
-CMD ["node", "sew-queen-pro/start.js"]
+
 CMD ["node", "sew.js"]
