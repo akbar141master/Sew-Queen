@@ -16,7 +16,7 @@ let fs = require('fs');
 let os = require('os');
 let got = require('got');
 let SQQA = require('./SQ-QA')
-let WorkType = Details.WORKTYPE == 'public' ? ' Public' : ' Private'
+let WorkType = Details.WORKTYPE == 'public' ? ' PUBLIC' : ' PRIVATE'
 let path = require("path");
 let chalk = require('chalk');
 let {WAConnection, MessageOptions, MessageType, Mimetype, Presence, WALocationMessage, WAMessageProto, ReconnectMode, ProxyAgent, ChatModification, GroupSettingChange, WA_MESSAGE_STUB_TYPES, WA_DEAFULT_EPHEMERAL, waChatKey, mentionedJid, processTime, prepareMessageFromContent, relayWAMessage } = require('@adiwajshing/baileys');  
@@ -109,16 +109,15 @@ async function sewQueen(webversion) {
                 }
         })
         DataKey.on('connecting', async () => {
-                console.log(`${chalk.green.bold('Queen')}${chalk.blue.bold('Sew')}
-    ${chalk.white.bold('Version:')} ${chalk.red.bold(Details.VERSION)}
-    ${chalk.blue.italic('🇱🇰 Try To Login WhatsApp... Please Wait...')}`);
+                console.log(`${chalk.bold.rgb(238, 7, 230)('S')}${chalk.bold.rgb(4, 252, 29)('E')}${chalk.bold.rgb(252, 4, 37)('W ')}${chalk.bold.rgb(21, 4, 252)('Q')}${chalk.bold.rgb(0, 255, 255)('U')}${chalk.bold.rgb(255, 0, 127)('E')}${chalk.bold.rgb(76, 0, 153)('E')}${chalk.bold.rgb(255, 255, 0)('N')}
+${chalk.white.bold('Version:')} ${chalk.red.bold(Details.VERSION)}
+${chalk.blue.italic('🎲 TRY TO LOGIN WHATSAPP... PLEASE WAIT...')}`);
         });
         DataKey.on('open', async () => {
-               // console.log(chalk.green.bold('⚛ Login successful!'));
-              //  console.log(chalk.blueBright.italic('✧✧ Installing External Commands...'));
-                console.log(chalk.blueBright.italic('❯❯❯PASSWORD CHECKING❮❮❮'));
+                console.log(chalk.bold.rgb(238, 7, 230)('✬LOGIN SUCCESSFUL!'));
+                console.log(chalk.blueBright.italic('⚓PASSWORD CHECKING⚓'));
                 if (Details.SEWRR == 'raviya') {
-                        console.log(chalk.green.bold('✯✯Password Done✯✯'))
+                        console.log(chalk.green.bold('✯PASSWORD VERIFIED✯'))
                 } else if (Details.SEWRR !== 'raviya') {
                         throw new Error("Wrong password !!");
                         throw new Error("Wrong password !!");
@@ -127,8 +126,8 @@ async function sewQueen(webversion) {
                         throw new Error("Wrong password !!");
                         return;
                 }
-             //   console.log(chalk.blueBright.italic('✧✧ Installing External Commands...'));
-             //   console.log(chalk.blueBright.italic('⚛ Command Installed!'));
+            console.log(chalk.blueBright.italic('✬INSTALLING COMMANDS...'));
+              console.log(chalk.blueBright.italic('COMMANDS INSTALLED!'));
       
                 var Commands = await Commandsdb.PluginDB.findAll();
                 Commands.map(async (plugin) => {
@@ -147,7 +146,7 @@ async function sewQueen(webversion) {
                                 require('./Commands/' + plugin);
                         }
                 });
-                console.log(chalk.green.bold('⛄ Sew Queen is' + WorkType + ' ⛄'));
+                console.log(chalk.green.bold('🎲 SEW QUEEN IS' + WorkType + ' 🎲'));
                 await sendMessageBotOn(DataKey)
         })
         DataKey.on('chat-update', async m => {
