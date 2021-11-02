@@ -86,7 +86,7 @@ async function sewQueen(webversion) {
         DataKey.version = webversion || [2, 2140, 12];
         let Session = new StringSession();
         await sendMessageownerMSG(DataKey)
-        await sendMessageBIOMSG(DataKey)
+        //await sendMessageBIOMSG(DataKey)
         await sendMessageADSMSG(DataKey)
       DataKey.logger.level = Details.DEBUG ? 'debug' : 'warn';
         var Lostdb;
